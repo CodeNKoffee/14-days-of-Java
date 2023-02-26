@@ -1,4 +1,4 @@
-import javax.swing.event.SwingPropertyChangeSupport;
+import java.util.Scanner;
 
 public class JavaCourse {
   public static void main(String[] args) {
@@ -97,5 +97,18 @@ public class JavaCourse {
 
     // Write a program to find the square of the number 3.9.
     System.out.println(3.9 * 3.9);
+
+
+  // CSEN202 Tutorial 1 Exrecise
+  Scanner input = new Scanner(System.in);
+  System.out.println("Enter the number of eggs:");
+  int eggs = input.nextInt();
+
+  int dozens = eggs / 12;
+  int remainder = eggs % 12;
+
+  /* Close the Scanner object to avoid resource leaks */
+  input.close();
+  System.out.println("You have " + dozens + " dozens and " + remainder + " eggs remaining.");
   }
 }
